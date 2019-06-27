@@ -1,7 +1,7 @@
-<?php
-
-namespace Rigid\ColumnOptions;
-
-class TextOptions extends StringOptions {
-    
+<?php
+
+namespace Rigid\ColumnOptions;
+
+class TextOptions extends StringOptions {
+    
 }

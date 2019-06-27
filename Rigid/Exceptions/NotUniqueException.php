@@ -1,5 +1,5 @@
-<?php
-
-namespace Rigid\Exceptions;
-
+<?php
+
+namespace Rigid\Exceptions;
+
 class NotUniqueException extends \Exception {}

@@ -1,7 +1,7 @@
-<?php
-
-namespace Rigid;
-
-interface IWhereCondition extends SqlRepresentable {
-    
+<?php
+
+namespace Rigid;
+
+interface IWhereCondition extends SqlRepresentable {
+    
 }

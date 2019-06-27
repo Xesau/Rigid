@@ -1,7 +1,7 @@
-<?php
-
-namespace Rigid;
-
-interface ISelectionOptions {
-    
+<?php
+
+namespace Rigid;
+
+interface ISelectionOptions {
+    
 }
