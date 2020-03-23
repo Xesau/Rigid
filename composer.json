@@ -1,0 +1,9 @@
+{
+    "name": "xesau/rigid",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Rigid\\": "Rigid/"
+        }
+    }
+}
