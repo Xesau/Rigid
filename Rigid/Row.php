@@ -144,7 +144,7 @@ trait Row {
                 throw new UnexpectedValueException('Rigid\Row->set expects $value be in same Rigid\ORM');
             $ok = true;
             foreach($reference->getColumnMap() as $columnSource => $columnTarget) {
-                $ok = $ok && $this->setRaw($columnSource, $value->getKey($columnTarget));
+                $ok = $ok && $this->setRaw($columnSource, $value->getRawKey($columnTarget));
             }
             return $ok;
         }
