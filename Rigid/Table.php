@@ -17,6 +17,9 @@ class Table implements SqlRepresentable {
     /** @var Index[string] $indices The indices */
     private $indices = [];
     
+    /** @var bool[string] $indexedColumns */
+    private $indexedColumns = [];
+    
     /** @var Reference[] $references The (foreign) references */
     private $references = [];
     
@@ -60,6 +63,7 @@ class Table implements SqlRepresentable {
             foreach($index->getColumns() as $column) {
                 if (!isset($this->columns[$column]))
                     throw new NotDefinedException('Column "'.$column.'" not defined for "'.$this->name.'", found in index "'. $index->getName() .'"');
+                $this->indexedColumns[$column] = true;
             }
             
             $this->indices[$index->getName()] = $index;
@@ -100,6 +104,10 @@ class Table implements SqlRepresentable {
         
         $this->collation = (string)$collation;
         $this->engine = (string)$engine;
+    }
+    
+    public function isIndexedColumn($columnName) {
+        return !empty($this->indexedColumns[$columnName]);
     }
     
     public function getSqlRepresentation(array $options = null): QueryPart {
