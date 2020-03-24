@@ -12,8 +12,8 @@ class QueryPart {
     /** @var string $sql The SQL code */
     private $sql;
     
-    /** @var mixed[] $parameters The parameters */
-    private $parameters;
+    /** @var mixed[] $params The parameters */
+    private params;
     
     /** 
      * @param string $sql The SQL code
