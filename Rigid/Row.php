@@ -103,14 +103,9 @@ trait Row {
     }
     
     /** 
-     * Gets the raw field value for a given column
-     *
-     * @param string $column The column
-     * @param bool $cached If true, returns the cached value (set using ->set or ->setRaw), before it's saved in the database. 
-     *      If false, the 'original' value 
      * @return mixed
      */
-    protected final function getRawKey(string $column, bool $cached = true) {
+    public final function getRawKey(string $column, bool $cached = true) {
         $table = self::rigidGetTable();
         if (!$table->isIndexedColumn($column))
             throw new NotDefinedException('Column "'.$column.'" is not an indexed column for '.get_called_class());
