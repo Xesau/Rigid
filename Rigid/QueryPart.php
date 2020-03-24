@@ -13,7 +13,7 @@ class QueryPart {
     private $sql;
     
     /** @var mixed[] $params The parameters */
-    private params;
+    private $params;
     
     /** 
      * @param string $sql The SQL code
