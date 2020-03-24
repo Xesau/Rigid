@@ -330,7 +330,7 @@ class ORM {
         $class = $selection->getTargetClass();
         
         // Exceute select query
-        $stmt = $this->executeQuery($select->getSqlRepresentation([
+        $stmt = $this->executeQuery($selection->getSqlRepresentation([
             'prefix' => $this->prefix,
             'first' => true
         ]));
