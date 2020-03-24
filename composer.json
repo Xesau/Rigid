@@ -1,6 +1,6 @@
 {
     "name": "xesau/rigid",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "autoload": {
         "psr-4": {
             "Rigid\\": "Rigid/"
