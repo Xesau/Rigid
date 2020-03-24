@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Rigid;
 
 use Rigid\Exceptions\NotImplementedException;
+use Rigid\Exceptions\NotDefinedException;
+use UnexpectedValueException;
 
 trait Row {
     /** @var mixed[string] $rigidOriginalData */
